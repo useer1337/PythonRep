@@ -1,22 +1,18 @@
-from model.Product import Product
-from model.Client import Client
+from model.DataBase import db
+from pony.orm import Set, Optional, select, Required
 
 
-class Basket:
-    def __init__(self, client: Client):
-        self.product_list = []
-        self.client = client
-        self.price = 0
+class Basket(db.Entity):
+    products = Set('Product')
+    order = Optional('Order')
+    price = Required(int, default=0)
 
-    def get_productList(self):
-        return self.product_list
-
-    def add_product(self, product: Product):
+    def add_product(self, product):
+        self.products.add(product)
         self.price += product.get_price()
-        self.product_list.append(product)
 
-    def get_item(self, index: int):
-        return self.product_list[index]
+    def get_products(self):
+        return self.products
 
-    def get_price(self):
-        return self.price
+    def get_price(self):  # TODO
+        self.price

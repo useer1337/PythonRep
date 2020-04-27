@@ -1,17 +1,29 @@
-from model.Client import Client
-from model.PayType import PayType
 from datetime import datetime
+from model.DataBase import db
+from pony.orm import Optional, Required
 
 
-class Order:
-    def __init__(self, client: Client, payed: bool, pay_type: PayType, delivery):
+class Order(db.Entity):
+    client = Required('Client')
+    payed = Optional(bool)
+    pay_type = Optional('PayType')
+    delivery = Optional('Delivery')
+    basket = Required('Basket')
+
+    '''
+    def __init__(self, client: Client = None, payed: bool = None, pay_type: PayType = None, delivery = None, basket: Basket = None):
         self.client = client
         self.payed = payed
         self.pay_type = pay_type
         self.delivery = delivery
         self.date = datetime.today()
+        self.basket = basket
+    '''
 
-    def set_client(self, client: Client):
+    def set_basket(self, basket):
+        self.basket = basket
+
+    def set_client(self, client):
         self.client = client
 
     def set_payed(self, payed: bool):
@@ -22,6 +34,9 @@ class Order:
 
     def set_delivery(self, delivery):
         self.delivery = delivery
+
+    def get_basket(self):
+        return self.basket
 
     def get_client(self):
         return self.client
@@ -36,4 +51,5 @@ class Order:
         return self.delivery
 
     def get_date(self):
-        return self.date
+        return datetime.now()
+

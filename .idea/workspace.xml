@@ -7,12 +7,29 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1ZFIVMvM088iDR7V5eox4Fjej5k" />
   <component name="ProjectViewState">
@@ -22,11 +39,78 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.main_2.0">
+    <configuration name="DataBase" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="quiteberries" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/model" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model/DataBase.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="FillBase (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="quiteberries" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/model" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model/FillBase.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="FillBase" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="quiteberries" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/model" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="F:\quiteberriesBeta\model\FillBase.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="quiteberries" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -49,11 +133,59 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="main_2.0" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="quiteberries" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/model" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model/main_2.0.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main_2.0" />
+        <item itemvalue="Python.FillBase (1)" />
+        <item itemvalue="Python.FillBase" />
+        <item itemvalue="Python.DataBase" />
         <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:database" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:database" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@11720dff" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -66,7 +198,18 @@
       <option name="presentableId" value="Default" />
       <updated>1584428438299</updated>
       <workItem from="1584428442028" duration="3606000" />
-      <workItem from="1584433155118" duration="6091000" />
+      <workItem from="1584433155118" duration="6665000" />
+      <workItem from="1585640596942" duration="1896000" />
+      <workItem from="1585895950920" duration="6129000" />
+      <workItem from="1585902204150" duration="2631000" />
+      <workItem from="1586253909770" duration="657000" />
+      <workItem from="1586255474457" duration="4355000" />
+      <workItem from="1586259855239" duration="1626000" />
+      <workItem from="1586325456130" duration="20952000" />
+      <workItem from="1586407707119" duration="62000" />
+      <workItem from="1586407776592" duration="15319000" />
+      <workItem from="1586500477990" duration="3798000" />
+      <workItem from="1587979548229" duration="238000" />
     </task>
     <servers />
   </component>
@@ -74,36 +217,94 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="409" y="5" key="#main" timestamp="1584433720263">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="429" y="194" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586341720125">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="429" y="194" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.768@0.0.1366.768" timestamp="1586341720125" />
+    <state x="413" y="131" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587979707226">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="413" y="124" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1586431619398" />
+    <state x="413" y="131" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.768@0.0.1366.768" timestamp="1587979707226" />
+    <state x="409" y="0" key="#main" timestamp="1585902248304">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="409" y="5" key="#main/0.0.1366.728@0.0.1366.728" timestamp="1584433720263" />
-    <state width="1323" height="153" key="GridCell.Tab.0.bottom" timestamp="1584439953822">
+    <state x="409" y="0" key="#main/0.0.1366.768@0.0.1366.768" timestamp="1585902248304" />
+    <state x="463" y="142" key="FileChooserDialogImpl" timestamp="1586407772236">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="463" y="142" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1586407772236" />
+    <state width="1323" height="83" key="GridCell.Tab.0.bottom" timestamp="1587979748498">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="57" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586504300838" />
+    <state width="1323" height="83" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1587979748498" />
+    <state width="1323" height="83" key="GridCell.Tab.0.center" timestamp="1587979748497">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="57" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586504300838" />
+    <state width="1323" height="83" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1587979748497" />
+    <state width="1323" height="83" key="GridCell.Tab.0.left" timestamp="1587979748497">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="57" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586504300837" />
+    <state width="1323" height="83" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1587979748497" />
+    <state width="1323" height="83" key="GridCell.Tab.0.right" timestamp="1587979748497">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="57" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586504300838" />
+    <state width="1323" height="83" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1587979748497" />
+    <state width="1323" height="100" key="GridCell.Tab.1.bottom" timestamp="1586436649237">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="153" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584439953822" />
-    <state width="1323" height="153" key="GridCell.Tab.0.center" timestamp="1584439953822">
+    <state width="1323" height="100" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586436649237" />
+    <state width="1286" height="270" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1586431546547" />
+    <state width="1323" height="100" key="GridCell.Tab.1.center" timestamp="1586436649237">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="153" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1584439953822" />
-    <state width="1323" height="153" key="GridCell.Tab.0.left" timestamp="1584439953822">
+    <state width="1323" height="100" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1586436649237" />
+    <state width="1286" height="270" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1586431546547" />
+    <state width="1323" height="100" key="GridCell.Tab.1.left" timestamp="1586436649237">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="153" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1584439953822" />
-    <state width="1323" height="153" key="GridCell.Tab.0.right" timestamp="1584439953822">
+    <state width="1323" height="100" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1586436649237" />
+    <state width="1286" height="270" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1586431546547" />
+    <state width="1323" height="100" key="GridCell.Tab.1.right" timestamp="1586436649237">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="153" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1584439953822" />
-    <state x="186" y="9" key="SettingsEditor" timestamp="1584433741264">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1323" height="100" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1586436649237" />
+    <state width="1286" height="270" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1586431546547" />
+    <state x="186" y="9" key="SettingsEditor" timestamp="1586407789222">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="186" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1584433741264" />
+    <state x="186" y="9" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1586407789222" />
     <state x="384" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1584428496484">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="384" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1584428496484" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1586344485026">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1586344485026" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="Shop[1]" language="Python" />
+        <watch expression="product_type" language="Python" />
+        <watch expression="list_productType" language="Python" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/quiteberriesBeta$main.coverage" NAME="main Coverage Results" MODIFIED="1585903701990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
+    <SUITE FILE_PATH="coverage/PythonRep$main_2_0.coverage" NAME="main_2.0 Coverage Results" MODIFIED="1587979945830" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
     <SUITE FILE_PATH="coverage/quiteberries$main.coverage" NAME="main Coverage Results" MODIFIED="1584439953806" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
+    <SUITE FILE_PATH="coverage/quiteberriesBeta$FillBase__1_.coverage" NAME="FillBase (1) Coverage Results" MODIFIED="1587979739876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
+    <SUITE FILE_PATH="coverage/quiteberriesBeta$model3.coverage" NAME="model3 Coverage Results" MODIFIED="1586409878883" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
+    <SUITE FILE_PATH="coverage/quiteberriesBeta$main_2_0.coverage" NAME="main_2.0 Coverage Results" MODIFIED="1587979748481" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
+    <SUITE FILE_PATH="coverage/quiteberriesBeta$DataBase.coverage" NAME="DataBase Coverage Results" MODIFIED="1586257615426" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
   </component>
 </project>

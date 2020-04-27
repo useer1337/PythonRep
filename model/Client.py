@@ -1,8 +1,19 @@
-class Client:
+from model.DataBase import db
+from pony.orm import Set, Required
+
+
+class Client(db.Entity):
+    name = Required(str)
+    login = Required(str, unique=True)
+    password = Required(str)
+    order = Set('Order')
+
+    '''
     def __init__(self, name: str, login: str, password: str):
         self.name = name
         self.login = login
         self.password = password
+    '''
 
     def set_name(self, name: str):
         self.name = name
