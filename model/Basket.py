@@ -1,5 +1,6 @@
+from pony.orm import Set, Optional, Required
+
 from model.DataBase import db
-from pony.orm import Set, Optional, select, Required
 
 
 class Basket(db.Entity):
@@ -14,5 +15,5 @@ class Basket(db.Entity):
     def get_products(self):
         return self.products
 
-    def get_price(self):  # TODO
-        self.price
+    def get_price(self):
+        return self.price

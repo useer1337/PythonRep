@@ -1,25 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="edd7d970-0696-4a64-8565-95d95335dd19" name="Default Changelist" comment="" />
+    <list default="true" id="edd7d970-0696-4a64-8565-95d95335dd19" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/quiteberries.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/quiteberries.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Basket.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/Basket.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/DataBase.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/DataBase.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/DelivCourier.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/DelivCourier.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Delivery.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/Delivery.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Order.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/Order.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/database.sqlite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/main_2.0.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/main_2.0.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand />
-    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -34,14 +50,20 @@
   <component name="ProjectId" id="1ZFIVMvM088iDR7V5eox4Fjej5k" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager" selected="Python.main_2.0">
@@ -165,28 +187,6 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:database" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:database" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@11720dff" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-            </expand>
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -210,76 +210,101 @@
       <workItem from="1586407776592" duration="15319000" />
       <workItem from="1586500477990" duration="3798000" />
       <workItem from="1587979548229" duration="238000" />
+      <workItem from="1588260346305" duration="892000" />
+      <workItem from="1588261653585" duration="41000" />
+      <workItem from="1588262240214" duration="2071000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="429" y="194" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586341720125">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="429" y="194" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.768@0.0.1366.768" timestamp="1586341720125" />
-    <state x="413" y="131" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587979707226">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state x="463" y="153" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588264219378">
+      <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="413" y="124" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1586431619398" />
     <state x="413" y="131" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.768@0.0.1366.768" timestamp="1587979707226" />
+    <state x="463" y="153" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/72.27.1294.741@72.27.1294.741" timestamp="1588264219378" />
     <state x="409" y="0" key="#main" timestamp="1585902248304">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="409" y="5" key="#main/0.0.1366.728@0.0.1366.728" timestamp="1584433720263" />
     <state x="409" y="0" key="#main/0.0.1366.768@0.0.1366.768" timestamp="1585902248304" />
-    <state x="463" y="142" key="FileChooserDialogImpl" timestamp="1586407772236">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state x="669" y="172" width="424" height="491" key="FileChooserDialogImpl" timestamp="1588261168031">
+      <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="463" y="142" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1586407772236" />
-    <state width="1323" height="83" key="GridCell.Tab.0.bottom" timestamp="1587979748498">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state x="669" y="172" width="424" height="491" key="FileChooserDialogImpl/72.27.1294.741@72.27.1294.741" timestamp="1588261168031" />
+    <state width="1248" height="181" key="GridCell.Tab.0.bottom" timestamp="1588264292561">
+      <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state width="1323" height="57" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586504300838" />
     <state width="1323" height="83" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1587979748498" />
-    <state width="1323" height="83" key="GridCell.Tab.0.center" timestamp="1587979748497">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="1248" height="181" key="GridCell.Tab.0.bottom/72.27.1294.741@72.27.1294.741" timestamp="1588264292561" />
+    <state width="1248" height="181" key="GridCell.Tab.0.center" timestamp="1588264292559">
+      <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state width="1323" height="57" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586504300838" />
     <state width="1323" height="83" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1587979748497" />
-    <state width="1323" height="83" key="GridCell.Tab.0.left" timestamp="1587979748497">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="1248" height="181" key="GridCell.Tab.0.center/72.27.1294.741@72.27.1294.741" timestamp="1588264292559" />
+    <state width="1248" height="181" key="GridCell.Tab.0.left" timestamp="1588264292559">
+      <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state width="1323" height="57" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586504300837" />
     <state width="1323" height="83" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1587979748497" />
-    <state width="1323" height="83" key="GridCell.Tab.0.right" timestamp="1587979748497">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="1248" height="181" key="GridCell.Tab.0.left/72.27.1294.741@72.27.1294.741" timestamp="1588264292559" />
+    <state width="1248" height="181" key="GridCell.Tab.0.right" timestamp="1588264292561">
+      <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state width="1323" height="57" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586504300838" />
     <state width="1323" height="83" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1587979748497" />
-    <state width="1323" height="100" key="GridCell.Tab.1.bottom" timestamp="1586436649237">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1248" height="181" key="GridCell.Tab.0.right/72.27.1294.741@72.27.1294.741" timestamp="1588264292561" />
+    <state width="1248" height="37" key="GridCell.Tab.1.bottom" timestamp="1588263956533">
+      <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state width="1323" height="100" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586436649237" />
     <state width="1286" height="270" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1586431546547" />
-    <state width="1323" height="100" key="GridCell.Tab.1.center" timestamp="1586436649237">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1248" height="37" key="GridCell.Tab.1.bottom/72.27.1294.741@72.27.1294.741" timestamp="1588263956533" />
+    <state width="1248" height="37" key="GridCell.Tab.1.center" timestamp="1588263956531">
+      <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state width="1323" height="100" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1586436649237" />
     <state width="1286" height="270" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1586431546547" />
-    <state width="1323" height="100" key="GridCell.Tab.1.left" timestamp="1586436649237">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1248" height="37" key="GridCell.Tab.1.center/72.27.1294.741@72.27.1294.741" timestamp="1588263956531" />
+    <state width="1248" height="37" key="GridCell.Tab.1.left" timestamp="1588263956531">
+      <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state width="1323" height="100" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1586436649237" />
     <state width="1286" height="270" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1586431546547" />
-    <state width="1323" height="100" key="GridCell.Tab.1.right" timestamp="1586436649237">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1248" height="37" key="GridCell.Tab.1.left/72.27.1294.741@72.27.1294.741" timestamp="1588263956531" />
+    <state width="1248" height="37" key="GridCell.Tab.1.right" timestamp="1588263956532">
+      <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state width="1323" height="100" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1586436649237" />
     <state width="1286" height="270" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1586431546547" />
-    <state x="186" y="9" key="SettingsEditor" timestamp="1586407789222">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="1248" height="37" key="GridCell.Tab.1.right/72.27.1294.741@72.27.1294.741" timestamp="1588263956532" />
+    <state x="72" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1588262613713">
+      <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="186" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1584433741264" />
     <state x="186" y="9" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1586407789222" />
+    <state x="72" y="31" width="1022" height="737" key="SettingsEditor/72.27.1294.741@72.27.1294.741" timestamp="1588262613713" />
     <state x="384" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1584428496484">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -289,21 +314,13 @@
     </state>
     <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1586344485026" />
   </component>
-  <component name="XDebuggerManager">
-    <watches-manager>
-      <configuration name="PythonConfigurationType">
-        <watch expression="Shop[1]" language="Python" />
-        <watch expression="product_type" language="Python" />
-        <watch expression="list_productType" language="Python" />
-      </configuration>
-    </watches-manager>
-  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/quiteberriesBeta$main.coverage" NAME="main Coverage Results" MODIFIED="1585903701990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
-    <SUITE FILE_PATH="coverage/PythonRep$main_2_0.coverage" NAME="main_2.0 Coverage Results" MODIFIED="1587979945830" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
-    <SUITE FILE_PATH="coverage/quiteberries$main.coverage" NAME="main Coverage Results" MODIFIED="1584439953806" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
+    <SUITE FILE_PATH="coverage/PythonRep$FillBase__1_.coverage" NAME="FillBase (1) Coverage Results" MODIFIED="1588264223884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
     <SUITE FILE_PATH="coverage/quiteberriesBeta$FillBase__1_.coverage" NAME="FillBase (1) Coverage Results" MODIFIED="1587979739876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
     <SUITE FILE_PATH="coverage/quiteberriesBeta$model3.coverage" NAME="model3 Coverage Results" MODIFIED="1586409878883" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
+    <SUITE FILE_PATH="coverage/quiteberries$main.coverage" NAME="main Coverage Results" MODIFIED="1584439953806" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
+    <SUITE FILE_PATH="coverage/PythonRep$main_2_0.coverage" NAME="main_2.0 Coverage Results" MODIFIED="1588264292530" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
+    <SUITE FILE_PATH="coverage/quiteberriesBeta$main.coverage" NAME="main Coverage Results" MODIFIED="1585903701990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
     <SUITE FILE_PATH="coverage/quiteberriesBeta$main_2_0.coverage" NAME="main_2.0 Coverage Results" MODIFIED="1587979748481" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
     <SUITE FILE_PATH="coverage/quiteberriesBeta$DataBase.coverage" NAME="DataBase Coverage Results" MODIFIED="1586257615426" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
   </component>

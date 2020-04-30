@@ -53,3 +53,6 @@ class Order(db.Entity):
     def get_date(self):
         return datetime.now()
 
+    def __str__(self):
+        return str(self.get_delivery().get_date())
+

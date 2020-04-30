@@ -106,6 +106,12 @@ with db_session:
         elif end == "4":
             break
 
+        elif end == "5":
+            order_list = select(o for o in client.order)[:]
+            for observable_order in order_list[:-1]:
+                print(str(observable_order) + '\n')
+
+
     # Доставка
     print("Доставка на дом ")
     print("Доставка в магазин ")

@@ -1,6 +1,8 @@
 from datetime import datetime, timedelta
+
+from pony.orm import Optional
+
 from model.DataBase import db
-from pony.orm import Required, Optional
 
 
 class Delivery(db.Entity):
