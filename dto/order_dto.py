@@ -1,6 +1,6 @@
 import dto.basket_dto as BasketDTO
 from dto.client_dto import ClientDTO
-from dto.delivery_dto import DeliveryDTO
+import dto.delivery_dto as DeliveryDTO
 from dto.dto import DTO
 from dto.pay_type_dto import PayTypeDTO
 
@@ -8,7 +8,7 @@ from dto.pay_type_dto import PayTypeDTO
 class OrderDTO(DTO):
     classes = {'client': ClientDTO,
                'pay_type': PayTypeDTO,
-               'delivery': DeliveryDTO,  # TODO mb wrong type delivery
+               'delivery': DeliveryDTO, 
                'basket': BasketDTO
                }
 

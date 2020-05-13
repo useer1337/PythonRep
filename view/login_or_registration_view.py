@@ -1,8 +1,8 @@
-import sys
-
 from PyQt5.QtCore import QRegExp
 from PyQt5.QtGui import QRegExpValidator
-from PyQt5.QtWidgets import QLineEdit, QLabel, QPushButton, QVBoxLayout, QApplication, QWidget, QHBoxLayout
+from PyQt5.QtWidgets import QLineEdit, QLabel, QPushButton, QVBoxLayout, QWidget, QHBoxLayout, QMessageBox
+
+from presenter.login_or_registration_presenter import LoginOrRegistrationPresenter
 
 
 class LoginOrPasswordView(QWidget):
@@ -28,6 +28,9 @@ class LoginOrPasswordView(QWidget):
         self.button_login = QPushButton("Login")
         self.button_registration = QPushButton("Registration")
 
+        self.button_login.clicked.connect(self.login)
+        self.button_registration.clicked.connect(self.registration)
+
         vbox_layout = QVBoxLayout()
         vbox_layout.addWidget(self.label_name)
         vbox_layout.addWidget(self.line_edit_name)
@@ -44,11 +47,25 @@ class LoginOrPasswordView(QWidget):
 
         self.setLayout(vbox_layout)
 
+        self.presenter = LoginOrRegistrationPresenter(self)
 
-if __name__ == '__main__':
-    app = QApplication(sys.argv)
+    def get_name(self):
+        return self.line_edit_name.text()
 
-    login_or_password = LoginOrPassword()
-    login_or_password.show()
+    def get_login(self):
+        return self.line_edit_login.text()
 
-    app.exec_()
+    def get_password(self):
+        return self.line_edit_password.text()
+
+    def get_message_box(self, text: str):
+        messageBox = QMessageBox()
+        messageBox.setText(text)
+        messageBox.setIcon(QMessageBox.Warning)
+        messageBox.exec_()
+
+    def login(self):
+        self.presenter.login()
+
+    def registration(self):
+        self.presenter.registration()

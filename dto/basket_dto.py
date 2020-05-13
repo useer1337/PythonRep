@@ -1,11 +1,11 @@
 from dto.dto import DTO
-from dto.order_dto import OrderDTO
+import dto.order_dto as OrderDTO
 
 
 class BasketDTO(DTO):
     classes = {'order': OrderDTO}
 
-    def __init__(self, id=None, order=None,price=None,products=None):
+    def __init__(self, id=None, order=None, price=None, products=None):
         self.id = id
         self.order = order
         if products:
@@ -20,10 +20,12 @@ class BasketDTO(DTO):
 
     def add_product(self, product):
         self.products.append(product)
+        product.quantity -= 1
         self.price += product.price
 
     def remove_product(self, product):
         self.products.remove(product)
+        product.quantity += 1
         self.price -= product.price
 
     @staticmethod
