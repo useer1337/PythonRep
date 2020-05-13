@@ -3,7 +3,6 @@ from PyQt5.QtWidgets import QWidget, QComboBox, QVBoxLayout, QPushButton, QHBoxL
     QLineEdit
 
 from presenter.main_view_presenter import MainViewPresenter
-import view.login_or_registration_view as LoginOrPasswordView
 
 
 class MainView(QWidget):
@@ -46,28 +45,34 @@ class MainView(QWidget):
         layout_bot_right.addWidget(self.look_order_button)
         layout_bot_right.addWidget(self.buy_button)
 
-        layout_right = QVBoxLayout()
-        layout_right.addWidget(self.add_button)
-        layout_right.addWidget(self.look_button)
-        layout_right.addWidget(self.combobox_pay_type)
-        layout_right.addWidget(self.combobox_delivery_type)
+        self.layout_right = QVBoxLayout()
+        self.layout_right.addWidget(self.add_button)
+        self.layout_right.addWidget(self.look_button)
+        self.layout_right.addWidget(self.combobox_pay_type)
+        self.layout_right.addWidget(self.combobox_delivery_type)
+        self.layout_right.addWidget(self.address_line_edit)
+        self.layout_right.addWidget(self.combobox_shops)
 
-        layout_right.addLayout(layout_bot_right)
+        self.address_line_edit.hide()
+        self.combobox_shops.hide()
+
+        self.layout_right.addLayout(layout_bot_right)
 
         central_layout = QVBoxLayout()
         central_layout.addWidget(self.table_widget)
 
         main_layout.addLayout(layout_combobox)
         main_layout.addLayout(central_layout)
-        main_layout.addLayout(layout_right)
+        main_layout.addLayout(self.layout_right)
 
         self.setLayout(main_layout)
 
         self.presenter = MainViewPresenter(self)
 
         self.add_pay_types()
-        self.combobox_delivery_type.addItem("Доставка в магзин", self.presenter.delivery_shops[0])
-        self.combobox_delivery_type.addItem("Доставка по адресу", self.presenter.delivery_couriers[0])
+        self.combobox_delivery_type.addItems(['Доставка в магзин', 'Доставка по адресу'])
+
+        self.appear()
 
         self.combobox_position.addItem(self.presenter.product_types[0].name, self.presenter.product_types[0])
         self.combobox_position.addItem(self.presenter.product_types[1].name, self.presenter.product_types[1])
@@ -75,9 +80,21 @@ class MainView(QWidget):
         self.combobox_position.currentTextChanged.connect(self.add_body_combobox)
         self.combobox_body.currentTextChanged.connect(self.add_items_combobox)
         self.combobox_items.currentTextChanged.connect(self.fill_table)
+        self.combobox_delivery_type.currentTextChanged.connect(self.appear)
 
-    def get_delivery(self):
-        return self.combobox_delivery_type.currentText()
+    def appear(self):
+        if self.combobox_delivery_type.currentText() == "Доставка в магзин":
+            self.address_line_edit.hide()
+            self.combobox_shops.show()
+            self.presenter.get_shops()
+        else:
+            self.combobox_shops.hide()
+            self.address_line_edit.show()
+
+    def get_shops(self):
+        self.combobox_shops.clear()
+        for shop in self.presenter.get_shops():
+            self.combobox_shops.addItem(shop.address, shop)
 
     def get_pay_type(self):
         return self.combobox_pay_type.currentText()

@@ -7,6 +7,7 @@ from service.delivery_shop_service import DeliveryShopService
 from service.pay_type_service import PayTypeService
 from service.product_service import ProductService
 from service.product_type_service import ProductTypeService
+from service.shop_service import ShopService
 
 
 class MainViewPresenter:
@@ -18,16 +19,18 @@ class MainViewPresenter:
         self.delivery_courier_service = DeliveryCourierService()
         self.product_service = ProductService()
         self.basket_service = BasketService()
+        self.shops_service = ShopService()
 
         self.product_types = self.product_type_service.get_all()
-        self.delivery_shops = self.delivery_shop_service.get_all()
-        self.delivery_couriers = self.delivery_courier_service.get_all()
         self.pay_types = self.pay_type_service.get_all()
         self.products = self.product_service.get_all()
 
         self.return_products = []
 
         self.basket_dto = BasketDTO()
+
+    def get_shops(self):
+        return self.shops_service.get_all()
 
     def get_pay_type(self):
         text = self.view.get_pay_type()
@@ -38,10 +41,6 @@ class MainViewPresenter:
             else:
                 continue
         return None
-
-    def get_delivery(self):
-        text = self.view.get_delivery()
-        #TODO
 
     def buy(self):
         order_dto = OrderDTO(client=self.view.get_client(),
