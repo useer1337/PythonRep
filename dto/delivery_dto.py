@@ -7,13 +7,13 @@ from dto.dto import DTO
 class DeliveryDTO(DTO):
     classes = {'order': OrderDTO}
 
-    # class_type=None
     def __init__(self, id=None, order=None, date=None):
         self.id = id
         self.order = order
-       # self.class_type = class_type
-        self.date = date
-
+        if date:
+            self.date = date
+        else:
+            self.date = datetime.now() + timedelta(days=10)
 
     @staticmethod
     def class_by_name(name):

@@ -29,7 +29,8 @@ class MainView(QWidget):
 
         self.add_button.clicked.connect(self.get_product)
         self.look_button.clicked.connect(self.get_basket)
-        # self.buy_button.clicked.connect(self.buy)
+        self.buy_button.clicked.connect(self.buy)
+        self.look_order_button.clicked.connect(self.look_orders)
 
         self.table_widget = QTableWidget()
         self.init_table()
@@ -82,11 +83,23 @@ class MainView(QWidget):
         self.combobox_items.currentTextChanged.connect(self.fill_table)
         self.combobox_delivery_type.currentTextChanged.connect(self.appear)
 
+    def look_orders(self):
+        self.presenter.look_orders()
+
+    def get_address(self):
+        return self.address_line_edit.text()
+
+    def get_delivery_text(self):
+        return self.combobox_delivery_type.currentText()
+
+    def buy(self):
+        self.presenter.buy()
+
     def appear(self):
         if self.combobox_delivery_type.currentText() == "Доставка в магзин":
             self.address_line_edit.hide()
             self.combobox_shops.show()
-            self.presenter.get_shops()
+            self.get_shops()
         else:
             self.combobox_shops.hide()
             self.address_line_edit.show()
@@ -95,6 +108,9 @@ class MainView(QWidget):
         self.combobox_shops.clear()
         for shop in self.presenter.get_shops():
             self.combobox_shops.addItem(shop.address, shop)
+
+    def get_shop_text(self):
+        return self.combobox_shops.currentText()
 
     def get_pay_type(self):
         return self.combobox_pay_type.currentText()
@@ -107,6 +123,7 @@ class MainView(QWidget):
 
     def get_product(self):
         self.presenter.get_product()
+        self.fill_table(self.combobox_items.currentText())
 
     def get_selected_row_index(self):
         index = self.table_widget.selectedIndexes()

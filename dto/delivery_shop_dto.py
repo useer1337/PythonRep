@@ -16,10 +16,5 @@ class DeliveryShopDTO(DeliveryDTO):
     def class_by_name(name):
         return DeliveryShopDTO.classes[name]
 
-    '''
-        def to_dict(self):
-            d = super().to_dict()
-            d['classtype'] = 'DeliveryShop'
-            return d
 
-    '''
+

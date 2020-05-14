@@ -1,6 +1,6 @@
-import dto.basket_dto as BasketDTO
+from dto.basket_dto import BasketDTO
 from dto.client_dto import ClientDTO
-import dto.delivery_dto as DeliveryDTO
+from dto.delivery_dto import DeliveryDTO
 from dto.dto import DTO
 from dto.pay_type_dto import PayTypeDTO
 
@@ -8,7 +8,7 @@ from dto.pay_type_dto import PayTypeDTO
 class OrderDTO(DTO):
     classes = {'client': ClientDTO,
                'pay_type': PayTypeDTO,
-               'delivery': DeliveryDTO, 
+               'delivery': DeliveryDTO,
                'basket': BasketDTO
                }
 
@@ -23,8 +23,7 @@ class OrderDTO(DTO):
 
     def __str__(self):
         return f"Order  id:{self.id} payed:{self.payed}  client:{self.client}" \
-                + f"pay_type:{self.pay_type} delivery:{self.delivery} basket:{self.basket}"
-
+               + f"pay_type:{self.pay_type} delivery:{self.delivery} basket:{self.basket}"
 
     @staticmethod
     def class_by_name(name):

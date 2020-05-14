@@ -9,9 +9,4 @@ class DeliveryCourierDTO(DeliveryDTO):
     def __str__(self):
         return f"Delivery address:{self.address}"
 
-    '''
-        def to_dict(self):
-            d = super().to_dict()
-            d['classtype'] = 'DeliveryCourier'
-            return d
-    '''
+

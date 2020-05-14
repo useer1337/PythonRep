@@ -34,3 +34,7 @@ class BasketDTO(DTO):
 
     def __str__(self):
         return f'Basket id:{self.id} order:{self.order} products:{self.products} price{self.price}'
+
+
+def get_basket_dto() -> BasketDTO:
+    return BasketDTO()

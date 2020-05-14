@@ -1,18 +1,23 @@
-from dto.basket_dto import BasketDTO
 from dto.order_dto import OrderDTO
 from dto.product_type_dto import ProductTypeDTO
 from service.basket_service import BasketService
+from service.client_service import ClientService
 from service.delivery_courier_service import DeliveryCourierService
 from service.delivery_shop_service import DeliveryShopService
+from service.order_service import OrderService
 from service.pay_type_service import PayTypeService
 from service.product_service import ProductService
 from service.product_type_service import ProductTypeService
 from service.shop_service import ShopService
+from dto.basket_dto import BasketDTO
+from dto.delivery_courier_dto import DeliveryCourierDTO
+from dto.delivery_shop_dto import DeliveryShopDTO
 
 
 class MainViewPresenter:
     def __init__(self, view):
         self.view = view
+        self.client_service = ClientService()
         self.product_type_service = ProductTypeService()
         self.pay_type_service = PayTypeService()
         self.delivery_shop_service = DeliveryShopService()
@@ -20,6 +25,7 @@ class MainViewPresenter:
         self.product_service = ProductService()
         self.basket_service = BasketService()
         self.shops_service = ShopService()
+        self.order_service = OrderService()
 
         self.product_types = self.product_type_service.get_all()
         self.pay_types = self.pay_type_service.get_all()
@@ -28,6 +34,29 @@ class MainViewPresenter:
         self.return_products = []
 
         self.basket_dto = BasketDTO()
+
+    def find_client(self):
+        for client in self.client_service.get_all():
+            if self.view.get_client().login == client.login:
+                return client
+
+    def look_orders(self):
+        for order in self.order_service.get_all():
+            print(order)
+
+    def get_delivery(self):
+        text = self.view.get_delivery_text()
+
+        if text == 'Доставка в магзин':
+            for shop in self.get_shops():
+                if self.view.get_shop_text() == shop.address:
+                    delivery_shop_dto = DeliveryShopDTO(shop=shop)
+                    self.delivery_shop_service.create(delivery_shop_dto)
+                    return delivery_shop_dto
+        else:
+            delivery_courier_dto = DeliveryCourierDTO(address=self.view.get_address())
+            self.delivery_courier_service.create(delivery_courier_dto)
+            return delivery_courier_dto
 
     def get_shops(self):
         return self.shops_service.get_all()
@@ -43,8 +72,24 @@ class MainViewPresenter:
         return None
 
     def buy(self):
-        order_dto = OrderDTO(client=self.view.get_client(),
-                             pay_type=self.get_pay_type())
+        client = self.view.get_client()
+        pay_type = self.get_pay_type()
+
+        if pay_type.name == "По карте":
+            payed = True
+        else:
+            payed = False
+
+        order_dto = OrderDTO(client=self.find_client(),
+                             pay_type=pay_type,
+                             basket=self.basket_dto,
+                             payed=payed,
+                             delivery=self.get_delivery()
+                             )
+
+        self.basket_service.create(self.basket_dto)
+        self.basket_dto = BasketDTO()
+        self.order_service.create(order_dto)
 
     def get_basket(self):
         for product in self.basket_dto.products:

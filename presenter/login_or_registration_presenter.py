@@ -1,6 +1,5 @@
 from dto.client_dto import ClientDTO
 from exception.client_not_found_exception import ClientNotFoundException
-from presenter.main_view_presenter import MainViewPresenter
 from service.client_service import ClientService
 from view.main_view import MainView
 
