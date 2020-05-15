@@ -1,6 +1,6 @@
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QWidget, QComboBox, QVBoxLayout, QPushButton, QHBoxLayout, QTableWidget, QTableWidgetItem, \
-    QLineEdit
+    QLineEdit, QHeaderView, QLabel, QSizePolicy, QMessageBox
 
 from presenter.main_view_presenter import MainViewPresenter
 
@@ -9,6 +9,9 @@ class MainView(QWidget):
     def __init__(self, parent=None, client=None):
         QWidget.__init__(self, parent=parent)
         self.client = client
+
+        self.resize(670, 200)
+        self.setWindowFlag(Qt.MSWindowsFixedSizeDialogHint)
 
         self.setWindowTitle("StillBerries")
 
@@ -32,8 +35,14 @@ class MainView(QWidget):
         self.buy_button.clicked.connect(self.buy)
         self.look_order_button.clicked.connect(self.look_orders)
 
+        self.type_pay_label = QLabel("Тип оплаты")
+        self.type_delivery_label = QLabel("Тип доставки")
+        self.greeting_label = QLabel("Здраствуйте " + self.client.name.title())
+
         self.table_widget = QTableWidget()
         self.init_table()
+
+        self.table_widget.itemClicked.connect(self.select_all_row)
 
         main_layout = QHBoxLayout()
 
@@ -49,10 +58,15 @@ class MainView(QWidget):
         self.layout_right = QVBoxLayout()
         self.layout_right.addWidget(self.add_button)
         self.layout_right.addWidget(self.look_button)
+        self.layout_right.addWidget(self.type_pay_label)
         self.layout_right.addWidget(self.combobox_pay_type)
+        self.layout_right.addWidget(self.type_delivery_label)
         self.layout_right.addWidget(self.combobox_delivery_type)
         self.layout_right.addWidget(self.address_line_edit)
         self.layout_right.addWidget(self.combobox_shops)
+
+        self.address_line_edit.setSizePolicy(QSizePolicy.Ignored, QSizePolicy.Preferred)
+        # self.address_line_edit.setMinimumWidth(150)
 
         self.address_line_edit.hide()
         self.combobox_shops.hide()
@@ -61,6 +75,7 @@ class MainView(QWidget):
 
         central_layout = QVBoxLayout()
         central_layout.addWidget(self.table_widget)
+        central_layout.addWidget(self.greeting_label)
 
         main_layout.addLayout(layout_combobox)
         main_layout.addLayout(central_layout)
@@ -82,6 +97,16 @@ class MainView(QWidget):
         self.combobox_body.currentTextChanged.connect(self.add_items_combobox)
         self.combobox_items.currentTextChanged.connect(self.fill_table)
         self.combobox_delivery_type.currentTextChanged.connect(self.appear)
+
+    def get_message_box(self, text: str):
+        messageBox = QMessageBox()
+        messageBox.setText(text)
+        messageBox.setIcon(QMessageBox.Warning)
+        messageBox.setWindowTitle("Ошибочка")
+        messageBox.exec_()
+
+    def select_all_row(self):
+        self.presenter.select_all_row()
 
     def look_orders(self):
         self.presenter.look_orders()
@@ -158,4 +183,6 @@ class MainView(QWidget):
 
     def init_table(self):
         self.table_widget.setColumnCount(6)
-        self.table_widget.setHorizontalHeaderLabels(['id', 'Размер', 'Цвет', 'Цена', 'Кол-во', 'Тип товара'])
+        self.table_widget.setHorizontalHeaderLabels(
+            ['Цвет', 'Тип товара', 'Размер', 'Цена', 'На складе шт.', 'В корзине шт.'])
+        self.table_widget.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeToContents)

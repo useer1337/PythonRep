@@ -10,7 +10,7 @@ class DeliveryShopDTO(DeliveryDTO):
         self.shop = shop
 
     def __str__(self):
-        return f"DeliveryDTO = id:{self.id}  address:{self.order}"
+        return f"DeliveryShopDTO = id:{self.id}  shop:{str(self.shop)}"
 
     @staticmethod
     def class_by_name(name):

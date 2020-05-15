@@ -25,10 +25,14 @@ with db_session:
         PayType(name="Наличными")
         PayType(name="По карте")
 
-        Shop(address="ул. Пушкина д. Колоьушкина")
+        shop = Shop(address="ул. Пушкина д. Колотушкина")
         Shop(address="ул. Ленина д. Коренина")
 
-        select(s for s in Shop).show()
+        # DeliveryShop(shop=shop)
+
+        # DeliveryCourier(address="abvgd")
+
+        # select(s for s in Shop).show()
 
         # 3 футболки
         Product(size=40, color="white", price=500, quantity=15, product_type=product_type5)

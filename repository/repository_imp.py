@@ -1,7 +1,10 @@
 from abc import abstractmethod
 
-from pony.orm import db_session, commit
+from pony.orm import db_session, commit, select
 
+from model.basket import Basket
+from model.delivery import Delivery
+from model.delivery_courier import DeliveryCourier
 from repository.i_repository import IRORepository, ICRUDRepository
 
 

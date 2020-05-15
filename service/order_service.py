@@ -32,7 +32,7 @@ class OrderService(CRUDService):
 
     def load_delivery(self, event):
         if event.delivery:
-            if isinstance(event, DeliveryShopDTO):
+            if isinstance(event.delivery, DeliveryShopDTO):
                 event.delivery = DeliveryShopDTO.from_dict(DeliveryShopRepository().find(event.delivery.id))
             else:
                 event.delivery = DeliveryCourierDTO.from_dict(DeliveryCourierRepository().find(event.delivery.id))

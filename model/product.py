@@ -7,5 +7,6 @@ class Product(db.Entity):
     color = Required(str)
     price = Required(int)
     quantity = Required(int)
+    quantity_in_basket = Required(int, default=0)
     product_type = Required('ProductType')
     basket = Set('Basket')

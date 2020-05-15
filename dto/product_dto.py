@@ -6,12 +6,16 @@ class ProductDTO(DTO):
     classes = {'product_type': ProductTypeDTO}
 
     def __init__(self, id=None, size=None, color=None, price=None,
-                 quantity=None, product_type=None):
+                 quantity=None, quantity_in_basket=None, product_type=None):
         self.id = id
         self.size = size
         self.color = color
         self.price = price
         self.quantity = quantity
+        if quantity_in_basket:
+            self.quantity_in_basket = quantity_in_basket
+        else:
+            self.quantity_in_basket = 0
         self.product_type = product_type
 
     def __str__(self):

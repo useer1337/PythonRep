@@ -1,9 +1,9 @@
 from datetime import timedelta, datetime
 
-from database import db, PrimaryKey, Optional, Required
+from database import db, PrimaryKey, Optional
 
 
 class Delivery(db.Entity):
     id = PrimaryKey(int, auto=True)
     order = Optional('Order')
-    date = Required(datetime, default=datetime.now() + timedelta(days=10))
+    date = Optional(datetime, default=datetime.now() + timedelta(days=10))

@@ -30,7 +30,8 @@ class BasketRepository(CRUDRepositoryImp):
 
     @staticmethod
     def to_dict(basket):
-        d = basket.to_dict()
+        d = basket.to_dict(with_collections=True)
+        d['products'] = list(map(lambda item: {'id':item}, d['products']))
         d['order'] = {'id': d['order']}
         #del d['classtype']
         return d

@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from database import db, PrimaryKey, Optional, Required
 
 
@@ -8,3 +10,4 @@ class Order(db.Entity):
     pay_type = Required('PayType')
     delivery = Required('Delivery')
     basket = Required('Basket')
+    date = Required(datetime, default=datetime.today())

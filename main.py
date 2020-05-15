@@ -2,6 +2,7 @@ from dto.basket_dto import BasketDTO
 from dto.client_dto import ClientDTO
 from dto.order_dto import OrderDTO
 from dto.product_dto import ProductDTO
+from model.basket import Basket
 from seed import *
 
 from dto.product_type_dto import ProductTypeDTO
@@ -73,6 +74,12 @@ basket_dto.add_product(products[0])
 basket_service = BasketService()
 basket_service.create(basket_dto)
 
+'''
+b = select(bb for bb in Basket)[:]
+for bb in b:
+    print(bb.products)
+'''
+
 baskets = basket_service.get_all()
 
 # НЕ показывает товары в корзине!!!!
@@ -84,4 +91,5 @@ for basket in baskets:
 order_dto = OrderDTO(payed=True, client=clients[0], pay_type=pay_types[0], delivery=delivery_shops[0],basket=baskets[0])
 order_service = OrderService()
 order_service.create(order_dto)
+delivery_shop_service.load_shop(order_dto.delivery)
 print(order_dto)

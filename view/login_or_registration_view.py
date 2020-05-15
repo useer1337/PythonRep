@@ -1,4 +1,4 @@
-from PyQt5.QtCore import QRegExp
+from PyQt5.QtCore import QRegExp, Qt
 from PyQt5.QtGui import QRegExpValidator
 from PyQt5.QtWidgets import QLineEdit, QLabel, QPushButton, QVBoxLayout, QWidget, QHBoxLayout, QMessageBox
 
@@ -11,19 +11,23 @@ class LoginOrPasswordView(QWidget):
 
         self.setWindowTitle("Вход в программу")
         self.resize(300, 150)
+        self.setWindowFlag(Qt.MSWindowsFixedSizeDialogHint)
 
         self.line_edit_name = QLineEdit()
         self.line_edit_login = QLineEdit()
         self.line_edit_password = QLineEdit()
 
-        self.line_edit_name.setValidator(QRegExpValidator(QRegExp(r"^[A-Za-z]*$")))
-        self.line_edit_login.setValidator(QRegExpValidator(QRegExp(r"^[A-Za-z0-9]*$")))
+        self.line_edit_name.setValidator(QRegExpValidator(QRegExp(r"^[A-Za-z]*[0-9]*$")))
+        self.line_edit_login.setValidator(QRegExpValidator(QRegExp(r"^[A-Za-z]*[0-9]*$")))
         self.line_edit_password.setValidator(QRegExpValidator(QRegExp(r"^[A-Za-z0-9]*$")))
         self.line_edit_password.setEchoMode(QLineEdit.Password)
 
         self.label_name = QLabel("Name")
         self.label_login = QLabel("Login")
         self.label_password = QLabel("Password")
+        self.label_ok = QLabel("Вы зарегистрировались, введите ваши данные занова!")
+
+        self.label_ok.setStyleSheet('color: green')
 
         self.button_login = QPushButton("Login")
         self.button_registration = QPushButton("Registration")
@@ -32,12 +36,15 @@ class LoginOrPasswordView(QWidget):
         self.button_registration.clicked.connect(self.registration)
 
         vbox_layout = QVBoxLayout()
+        vbox_layout.addWidget(self.label_ok)
         vbox_layout.addWidget(self.label_name)
         vbox_layout.addWidget(self.line_edit_name)
         vbox_layout.addWidget(self.label_login)
         vbox_layout.addWidget(self.line_edit_login)
         vbox_layout.addWidget(self.label_password)
         vbox_layout.addWidget(self.line_edit_password)
+
+        self.label_ok.hide()
 
         btn_layout = QHBoxLayout()
         btn_layout.addWidget(self.button_login)
@@ -62,6 +69,7 @@ class LoginOrPasswordView(QWidget):
         messageBox = QMessageBox()
         messageBox.setText(text)
         messageBox.setIcon(QMessageBox.Warning)
+        messageBox.setWindowTitle("Ошибочка")
         messageBox.exec_()
 
     def login(self):
